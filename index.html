@@ -1,0 +1,40 @@
+<head>
+    <style>
+     body {
+         margin: 0;
+     }
+     canvas {
+         border: 1px dotted black;
+     }
+    </style>
+</head>
+<body>
+    <canvas id="plan"></canvas>
+    <label>f(x) = <input type="text" name="fx" id="fx" value="" placeholder="1000 + (1 + (x/100)) ^ 5"><button input="button" name="Draw" onclick="draw_graph()">Draw</button></label>
+    <div id="msg"></div>
+    </body>
+
+<script src="canvas.js" type="text/javascript"></script>
+<script src="parse.js" type="text/javascript"></script>
+<script type="text/javascript">
+ var plan = init_plan(document.getElementById('plan'), 400, 400);
+ var graph = draw_plan(plan);
+
+ graph.beginPath();
+ function draw_graph() {
+     //var output = document.getElementById('msg');
+     //output.innerHTML = '';
+    var exp = fx(document.getElementById('fx').value);
+     for (var x = -200; x <= 200; x += 0.5) {
+        exp.x = x;
+        exp.mkAtom();
+        y = exp.fx();
+        tempX = plan.custom.centerX + x;
+        tempY = plan.custom.centerY - y;
+        //output.innerHTML += '<br />('+x+', '+y+')';
+        //output.innerHTML += '<br />('+tempX+', '+tempY+')';
+        graph.fillRect(tempX, tempY, 1.5, 1.5);
+    }
+    graph.stroke();
+ }
+</script>
