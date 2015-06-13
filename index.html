@@ -20,21 +20,22 @@
  var plan = init_plan(document.getElementById('plan'), 400, 400);
  var graph = draw_plan(plan);
 
- graph.beginPath();
  function draw_graph() {
      //var output = document.getElementById('msg');
      //output.innerHTML = '';
+    //graph.beginPath();
+    graph.strokeStyle = "#f00";
     var exp = fx(document.getElementById('fx').value);
-     for (var x = -200; x <= 200; x += 0.5) {
+     for (var x = -plan.custom.centerX; x <= plan.custom.centerX; x += 0.5) {
         exp.x = x;
-        exp.mkAtom();
-        y = exp.fx();
+        exp.parse();
+        y = exp.exec();
         tempX = plan.custom.centerX + x;
         tempY = plan.custom.centerY - y;
         //output.innerHTML += '<br />('+x+', '+y+')';
         //output.innerHTML += '<br />('+tempX+', '+tempY+')';
-        graph.fillRect(tempX, tempY, 1.5, 1.5);
-    }
-    graph.stroke();
+        graph.strokeRect(tempX, tempY, 1.5, 1.5);
+     }
+     //graph.stroke();
  }
 </script>

@@ -2,7 +2,7 @@ function fx(exp) {
     return {
         x: 0,
         atom: [],
-        mkAtom: function() {
+        parse: function() {
             this.atom = [];
             this.atom.push("(");
             var len = exp.length;
@@ -46,7 +46,7 @@ function fx(exp) {
             this.atom.push(")");
             return this.atom;
         },
-        fx: function() {
+        exec: function() {
             stk = stack();
             len = this.atom.length;
             console.log(JSON.stringify(this.atom));
@@ -75,7 +75,7 @@ function fx(exp) {
                             r2 = r1 / r2;
                             break;
                         case '^':
-                            r2 = sqrt(r2, r1);
+                            r2 = power(r2, r1);
                             break;
                         }
                     }
@@ -130,7 +130,7 @@ function isDigit(ch) {
     return /[0-9.]/i.test(ch);
 }
 
-function sqrt(x, b) {
+function power(x, b) {
     var temp = 1;
     for (var i = 0; i < x; i++) {
         temp *= b;
