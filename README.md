@@ -1,2 +1,2 @@
 # graph-the-equation
-graph equation using canvas
+graph linear equation using canvas js
