@@ -1,2 +1,2 @@
 # graph-the-equation
-graph equation using canvas
+graph algebraic equation using canvas js
