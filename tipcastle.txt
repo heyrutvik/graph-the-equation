@@ -1,0 +1,17 @@
+Shared Plan:        Business
+    Your Control Panel: https://gator3032.hostgator.com:2083
+    Username:           tony
+    Domain:             tiptrust.com
+    Password:           ce0WhwDkc9|h
+    1st Nameserver:     ns6063.hostgator.com
+    2nd Nameserver:     ns6064.hostgator.com
+    Server IP:          50.87.144.54
+
+
+
+database:-  tony_tiptrust
+user:-     tony_tiptrust
+password:- ce0WhwDkc9|h
+
+Fto:- tiptrust@tiptrust.com
+ce0WhwDkc9|h

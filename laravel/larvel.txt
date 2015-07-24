@@ -1,0 +1,12 @@
+Events:
+
+http://laravel.com/docs/master/events
+http://culttt.com/2014/06/16/creating-registration-events-laravel-4/
+
+
+Forms in laravel 5.1
+http://laravelcollective.com/docs/5.1/html
+
+
+Blueprint in schema 
+http://stackoverflow.com/questions/18124186/laravel-4-migrations-blueprint-meaning

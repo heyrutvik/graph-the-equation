@@ -1,0 +1,16 @@
+6000a+
+ today done
+
+common/model/user.php used for the login purpose
+
+created a new common user file for using a different table for login purpose of different purpose
+
+
+migrate for tipper regis created {table created}
+
+
+
+have to create sigup form for tipper {simple signup for the tipper created}
+
+
+have to create view for index page of the	 tipper

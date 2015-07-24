@@ -1,0 +1,20 @@
+@extends('layouts.master')
+@section('content')
+
+<h3>{{ $test->text }}</h3>
+<p><label>Address:</label> {{ $test->description }}</p>
+<p><label>Birth Date:</label> {{ $test->birth_date }}</p>
+<p><label>Joined on:</label> {{ $test->join_date }}</p>
+<p><label>Interest:</label> 
+	@foreach($data as $datas)
+	<ul><li>{{$datas}}</li></ul>	
+	@endforeach
+</p>
+<a href="{{route('tests.index')}}" class="btn btn-info">Back</a>
+<a href="{{route('tests.edit',[$test->id])}}" class="btn btn-primary">Edit</a>
+<div class="pull-right">
+	{!!Form::open(['method'=>'DELETE','route'=>['tests.destroy',$test->id]])!!}
+	{!!Form::submit('Delete', ['class'=>'btn btn-danger'])!!}
+	{!!Form::close()!!}
+</div>
+@stop
