@@ -14,3 +14,11 @@ Tiptrust Redime Account Details
 http://52.10.188.14/
 krunal
 krunal123#
+
+Host: 209.119.129.50
+Username: phantom.consulting.1
+Password: PB5YdYj8qrn.cWeB
+
+http://209.35.159.36:8080/ibi_apps/signin
+Username: phantom
+Password: qy7xeR6F2W
